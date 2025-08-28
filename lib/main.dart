@@ -40,10 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: PageView(
         scrollDirection: Axis.vertical,
         children: [
-          PageTwo(),
           PageOne(),
+          PageTwo(),
           Container(
-            color: Colors.blue,
+            color: Colors.white,
             child: const Center(child: Text('Page 3')),
           ),
         ],
