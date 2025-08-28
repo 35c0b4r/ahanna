@@ -41,4 +41,7 @@ flutter:
         - asset: assets/fonts/IowanOldSt BT Roman.ttf
     - family: Krishti
       fonts:
-        - asset: assets/fonts/Kristi-Regular.ttf
+        - asset: assets/fonts/Kristi-Regular.ttf    
+    - family: Akatab
+      fonts:
+        - asset: assets/fonts/Akatab-Regular.ttf

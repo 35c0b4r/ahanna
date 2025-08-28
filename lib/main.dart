@@ -1,4 +1,6 @@
+import 'package:ahanna/constants.dart';
 import 'package:ahanna/pages/page_one.dart';
+import 'package:ahanna/pages/page_two.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,15 +36,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF161616),
+      backgroundColor: backgroundColor.withValues(alpha: .3),
       body: PageView(
         scrollDirection: Axis.vertical,
         children: [
+          PageTwo(),
           PageOne(),
-          Container(
-            color: Colors.green,
-            child: const Center(child: Text('Page 2')),
-          ),
           Container(
             color: Colors.blue,
             child: const Center(child: Text('Page 3')),
