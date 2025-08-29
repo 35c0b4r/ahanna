@@ -32,7 +32,7 @@ class PageOne extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 400.0),
+                  padding: const EdgeInsets.only(top: 370.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -73,7 +73,7 @@ class PageOne extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: 32.0),
+                    padding: const EdgeInsets.only(bottom: 64.0),
                     child: Image.asset(scrollImage, scale: 3),
                   ),
                 ),
