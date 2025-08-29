@@ -28,13 +28,12 @@ class PageOne extends StatelessWidget {
                     : null,
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 370.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+            child: Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Column(
                     children: [
                       Text(
                         "بِسْمِ ٱللّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
@@ -61,7 +60,7 @@ class PageOne extends StatelessWidget {
                       SizedBox(height: 8),
                       Text("ASHIK PRAPTI", style: fullNameTextStyle),
                       Padding(
-                        padding: const EdgeInsets.only(top: 32.0, bottom: 16),
+                        padding: const EdgeInsets.only(top: 32.0, bottom: 32),
                         child: Text(
                           "as they begin their journey of togetherness.",
                           style: bottomTextStyle,
@@ -69,15 +68,9 @@ class PageOne extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 64.0),
-                    child: Image.asset(scrollImage, scale: 3),
-                  ),
-                ),
-              ],
+                  Image.asset(scrollImage, scale: 3),
+                ],
+              ),
             ),
           ),
         ),
