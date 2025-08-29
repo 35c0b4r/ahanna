@@ -1,6 +1,5 @@
 import 'package:ahanna/constants.dart';
 import 'package:ahanna/pages/page_one.dart';
-import 'package:ahanna/pages/page_two.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: '#ahanna',
+      title: 'withahanna',
       theme: ThemeData(
         textSelectionTheme: const TextSelectionThemeData(
           selectionColor: Color(0xFF000000),
@@ -37,17 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor.withValues(alpha: .3),
-      body: PageView(
-        scrollDirection: Axis.vertical,
-        children: [
-          PageOne(),
-          PageTwo(),
-          Container(
-            color: Colors.white,
-            child: const Center(child: Text('Page 3')),
-          ),
-        ],
-      ),
+      body: PageOne(),
     );
   }
 }

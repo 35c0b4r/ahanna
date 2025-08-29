@@ -1,6 +1,7 @@
 import 'dart:math' as math;
-
 import 'package:ahanna/constants.dart';
+import 'package:ahanna/pages/page_one.dart';
+import 'package:ahanna/pages/page_three.dart';
 import 'package:flutter/material.dart';
 
 class PageTwo extends StatelessWidget {
@@ -8,41 +9,93 @@ class PageTwo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        image: DecorationImage(
-          image: AssetImage(patternBackgroundImage),
-          opacity: .3,
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(32.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Transform.rotate(
-              angle: -math.pi / 12,
-              child: Column(
-                children: [
-                  Text(
-                    "Save the",
-                    style: saveTheDateStyle.copyWith(color: secondaryTextColor),
-                  ),
-                  Text("Date", style: saveTheDateStyle),
-                ],
+    return Scaffold(
+      body: GestureDetector(
+        onVerticalDragEnd: (details) {
+          if (details.primaryVelocity! > 0) {
+            Navigator.pop(
+              context,
+              PageRouteBuilder(
+                transitionDuration: Duration(seconds: 3),
+                reverseTransitionDuration: Duration(
+                  seconds: 1,
+                ), // Customize the pop duration here
+                pageBuilder: (context, animation, secondaryAnimation) {
+                  return PageOne();
+                },
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) {
+                      const begin = Offset(
+                        0.0,
+                        0.0,
+                      ); // Start from the current position
+                      const end = Offset(
+                        0.0,
+                        1.0,
+                      ); // Move downwards (pop transition)
+                      const curve = Curves.easeInOut;
+
+                      var tween = Tween(
+                        begin: begin,
+                        end: end,
+                      ).chain(CurveTween(curve: curve));
+                      var offsetAnimation = animation.drive(tween);
+
+                      return SlideTransition(
+                        position: offsetAnimation,
+                        child: child,
+                      );
+                    },
               ),
+            );
+          } else if (details.primaryVelocity! < 0) {
+            customGreetingsDialog(context);
+          }
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            image: DecorationImage(
+              image: AssetImage(patternBackgroundImage),
+              opacity: .3,
+              fit: BoxFit.cover,
             ),
-            SizedBox(height: 32),
-            DateAndTime(),
-            SizedBox(height: 16),
-            LocationWidget(),
-            SizedBox(height: 16),
-            EventScheduleImage(),
-            SizedBox(height: 16),
-            DressCode(),
-          ],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(32.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Transform.rotate(
+                  angle: -math.pi / 12,
+                  child: Column(
+                    children: [
+                      Text(
+                        "Save the",
+                        style: saveTheDateStyle.copyWith(
+                          color: secondaryTextColor,
+                        ),
+                      ),
+                      Text("Date", style: saveTheDateStyle),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 32),
+                DateAndTime(),
+                SizedBox(height: 16),
+                LocationWidget(),
+                SizedBox(height: 16),
+                EventScheduleImage(),
+                SizedBox(height: 16),
+                DressCode(),
+                SizedBox(height: 16),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Image.asset(scrollImage, scale: 3),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -55,6 +108,7 @@ class EventScheduleImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      constraints: BoxConstraints(maxWidth: 450),
       decoration: BoxDecoration(color: Colors.white.withValues(alpha: .3)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -168,7 +222,6 @@ class LocationWidget extends StatelessWidget {
         ),
         SizedBox(height: 8),
         Text("Impetus Lounge", style: locationTitleStyle),
-        SizedBox(height: 8),
         Text(
           "Impetus Center (Rooftop), \n242/B Bir Uttam Mir Shawkat Sarak, Dhaka 1208",
           textAlign: TextAlign.center,

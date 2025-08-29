@@ -8,6 +8,8 @@ const swipeUpImage = "assets/images/swipe_up.png";
 const patternBackgroundImage = "assets/images/pattern_background.png";
 const landMarkImage = "assets/images/landmark.png";
 const eventScheduleImage = "assets/images/event_schedule.png";
+const scrollImage = "assets/images/scroll.png";
+const greetingsImage = "assets/images/greetings.png";
 final TextStyle bismillahTextStyle = TextStyle(
   color: primaryTextColor,
   fontSize: 12,
@@ -27,15 +29,15 @@ final TextStyle fullNameTextStyle = TextStyle(
 );
 final TextStyle bottomTextStyle = TextStyle(
   color: secondaryTextColor,
-  fontSize: 12,
+  fontSize: 14,
   fontFamily: "Akatab",
   height: 1.0,
 );
 final TextStyle topSubtitleTextStyle = TextStyle(
   color: secondaryTextColor,
-  fontSize: 12,
+  fontSize: 14,
   fontFamily: "Akatab",
-  height: 1.0,
+  height: 1.5,
 );
 final TextStyle subTitleTextStyle = TextStyle(
   color: Color(0xFFB0B0B0),
@@ -51,7 +53,7 @@ final saveTheDateStyle = TextStyle(
 );
 final dateStyle = TextStyle(
   color: secondaryTextColor,
-  fontSize: 16,
+  fontSize: 18,
   fontFamily: "Julius Sans One",
   letterSpacing: 2,
 );
@@ -70,9 +72,9 @@ final locationTitleStyle = TextStyle(
 );
 final locationSubTitleStyle = TextStyle(
   color: secondaryTextColor,
-  fontSize: 16,
+  fontSize: 14,
   fontFamily: "Akatab",
-  height: 1,
+  height: 1.5,
 );
 
 final eventTitleStyle = TextStyle(
@@ -96,6 +98,19 @@ final dressCodeTitleTextStyle = TextStyle(
 
 final dressCodeSubTitleTextStyle = TextStyle(
   color: secondaryTextColor,
-  fontSize: 16,
+  fontSize: 14,
   fontFamily: "Akatab",
+);
+
+final greetingsTitleTextStyle = TextStyle(
+  color: backgroundColor,
+  fontSize: 19,
+  fontFamily: "Julius Sans One",
+);
+
+final greetingsSubTitleTextStyle = TextStyle(
+  color: backgroundColor,
+  fontSize: 14,
+  fontFamily: "Akatab",
+  height: 1.5,
 );
