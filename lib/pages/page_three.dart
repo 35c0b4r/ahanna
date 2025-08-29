@@ -106,11 +106,11 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
                         Navigator.of(context).pop();
                       },
                       child: CircleAvatar(
-                        radius: 22,
+                        radius: 18,
                         backgroundColor: backgroundColor,
                         child: Transform.rotate(
                           angle: math.pi,
-                          child: Image.asset(scrollImage, scale: 3),
+                          child: Image.asset(scrollImage, scale: 3.5),
                         ),
                       ),
                     ),
