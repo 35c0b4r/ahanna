@@ -31,7 +31,7 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
           filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
           child: Center(
             child: Container(
-              height: 300,
+              height: 320,
               margin: EdgeInsets.symmetric(horizontal: 16),
               constraints: BoxConstraints(maxWidth: 500),
               child: Scaffold(
@@ -44,7 +44,7 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
                       child: Image.asset(
                         greetingsImage,
                         fit: BoxFit.cover,
-                        height: 300,
+                        height: 320,
                       ),
                     ),
                     Container(
@@ -66,12 +66,12 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            "Your presence and heartfelt prayers",
+                            "Your presence and heartfelt prayers will be",
                             style: greetingsSubTitleTextStyle,
                             textAlign: TextAlign.center,
                           ),
                           Text(
-                            "will be cherished as we mark this beautiful beginning.",
+                            "cherished as we mark this beautiful beginning.",
                             style: greetingsSubTitleTextStyle,
                             textAlign: TextAlign.center,
                           ),
@@ -87,7 +87,7 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
                             textAlign: TextAlign.center,
                           ),
                           Text(
-                            "Mr. P. A. Rasul Tuku & Mrs. Taskin Mohit",
+                            "Mr. P. A. Rasul Tuku \n& Mrs. Taskin Mohit",
                             style: greetingsTitleTextStyle,
                             textAlign: TextAlign.center,
                           ),
@@ -97,7 +97,7 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
                             style: greetingsSubTitleTextStyle,
                           ),
                           Text(
-                            "Mr. Harun Or Rashid & Mrs. Ayesha Akter",
+                            "Mr. Harun Or Rashid \n& Mrs. Ayesha Akter",
                             style: greetingsTitleTextStyle,
                             textAlign: TextAlign.center,
                           ),
