@@ -1,11 +1,11 @@
 {
-    "name": "ahanna",
-    "short_name": "ahanna",
+    "name": "Ahad & Tianna",
+    "short_name": "Ahad & Tianna",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "We are delighted to invite you to join us for the Nikah (Aqd) Ceremony of Ahad & Tianna",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
