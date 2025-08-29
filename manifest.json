@@ -1,11 +1,11 @@
 {
-    "name": "Ahad & Tianna",
-    "short_name": "Ahad & Tianna",
+    "name": "Aqd of Ahad & Tianna",
+    "short_name": "Aqd of Ahad & Tianna",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "We are delighted to invite you to join us for the Nikah (Aqd) Ceremony of Ahad & Tianna.",
+    "description": "Invitation Card",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
