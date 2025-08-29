@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'withahanna',
+      title: 'Ahad & Tianna',
       theme: ThemeData(
         textSelectionTheme: const TextSelectionThemeData(
           selectionColor: Color(0xFF000000),
         ),
       ),
-      home: const MyHomePage(title: '#ahanna'),
+      home: const MyHomePage(title: 'Ahad & Tianna'),
     );
   }
 }

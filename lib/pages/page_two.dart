@@ -3,6 +3,7 @@ import 'package:ahanna/constants.dart';
 import 'package:ahanna/pages/page_one.dart';
 import 'package:ahanna/pages/page_three.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PageTwo extends StatelessWidget {
   const PageTwo({super.key});
@@ -83,7 +84,17 @@ class PageTwo extends StatelessWidget {
                 SizedBox(height: 32),
                 DateAndTime(),
                 SizedBox(height: 16),
-                LocationWidget(),
+                InkWell(
+                  onTap: () async {
+                    if (!await launchUrl(
+                      Uri.parse("https://maps.app.goo.gl/2AbAaTAxgQotFXsy6"),
+                      mode: LaunchMode.externalApplication,
+                    )) {
+                      throw Exception('Could not launch url');
+                    }
+                  },
+                  child: LocationWidget(),
+                ),
                 SizedBox(height: 16),
                 EventScheduleImage(),
                 SizedBox(height: 16),

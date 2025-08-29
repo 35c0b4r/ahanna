@@ -36,7 +36,10 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
               body: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  Image.asset(greetingsImage),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Image.asset(greetingsImage, fit: BoxFit.cover,height: 300),
+                  ),
                   Container(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
@@ -98,7 +101,7 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
                     ),
                   ),
                   Positioned(
-                    bottom: -18,
+                    bottom: -16,
                     left: 0,
                     right: 0,
                     child: GestureDetector(
@@ -106,7 +109,7 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
                         Navigator.of(context).pop();
                       },
                       child: CircleAvatar(
-                        radius: 18,
+                        radius: 14,
                         backgroundColor: backgroundColor,
                         child: Transform.rotate(
                           angle: math.pi,
