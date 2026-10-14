@@ -1,0 +1,10 @@
+.git
+.github
+.vscode
+.idea
+.dart_tool
+.flutter-plugins
+.flutter-plugins-dependencies
+build
+Dockerfile
+.dockerignore
