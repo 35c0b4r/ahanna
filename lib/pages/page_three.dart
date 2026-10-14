@@ -20,7 +20,7 @@ Future<Object?> customGreetingsDialog(BuildContext context) {
         child: child,
       );
     },
-    pageBuilder: (context, _, __) {
+    pageBuilder: (context, _, _) {
       return GestureDetector(
         onVerticalDragEnd: (details) {
           if (details.primaryVelocity! > 0) {
